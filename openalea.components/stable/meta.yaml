@@ -1,0 +1,37 @@
+package:
+  name: openalea.components
+  version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+  git_url: https://github.com/openalea/openalea-components
+  git_tag: master
+
+
+build:
+  preserve_egg_dir: True
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.misc
+    - openalea.core
+  run:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.misc
+    - openalea.core
+    - numpy
+    - scipy
+    - matplotlib
+
+test:
+  imports:
+    - openalea.math
+
+about:
+  home: http://virtualplants.github.io
+  license: Cecill-C License

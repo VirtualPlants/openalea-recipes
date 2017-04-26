@@ -1,9 +1,10 @@
 package:
   name: openalea.components
-  version: 1.4.0
+  version: nightly
 
 source:
   git_url: https://github.com/openalea/openalea-components
+  git_tag: develop
 
 
 build:
@@ -15,14 +16,14 @@ requirements:
     - python
     - setuptools
     - openalea.deploy
-    - openalea.misc
-    - openalea.core
+    - openalea.misc ==nightly
+    - openalea.core ==nightly
   run:
     - python
     - setuptools
     - openalea.deploy
-    - openalea.misc
-    - openalea.core
+    - openalea.misc ==nightly
+    - openalea.core ==nightly
     - numpy
     - scipy
     - matplotlib

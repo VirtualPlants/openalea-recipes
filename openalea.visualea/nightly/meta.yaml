@@ -1,0 +1,35 @@
+package:
+  name: openalea.visualea
+  version: nightly
+
+source:
+  git_url: https://github.com/openalea/openalea
+  git_tag: develop
+
+build:
+  preserve_egg_dir: True
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - openalea.deploy
+    #- mingw # [win]
+
+  run:
+    - python
+    - setuptools
+    - openalea.deploy
+    - openalea.core ==nightly
+    - openalea.misc ==nightly
+    - openalea.vpltk ==nightly
+    - openalea.grapheditor ==nightly
+    - openalea.oalab ==nightly
+    - qt <5
+    - pyqt <5
+    - ipython ==2.4.1
+    - ipython-qtconsole ==2.4.1
+
+about:
+  home: http://openalea.gforge.inria.fr/
+  license: Cecill-C License
